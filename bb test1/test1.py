@@ -42,10 +42,10 @@ class BoltzmannBrain:
         ]
         thought = random.choice(thoughts)
         self.thoughts.append((tick, thought))
-        print(f"[🧠 Brain #{self.id} @ Tick {tick}]: \"{thought}\"")
+        print(f"[Brain #{self.id} @ Tick {tick}]: \"{thought}\"")
 
     def dissolve(self):
-        print(f"🧠 Brain #{self.id} has dissipated into entropy.\n")
+        print(f"Brain #{self.id} has dissipated into entropy.\n")
         with open(f"brain_log_{self.id}.txt", "w") as f:
             f.write(f"Boltzmann Brain Log - ID {self.id}\n")
             f.write(f"Formed at {datetime.now()}\n\n")
@@ -69,7 +69,7 @@ try:
         if field.rare_fluctuation_occurs():
             brain_counter += 1
             brain = BoltzmannBrain(brain_id=brain_counter)
-            print(f"\n💥 Low-entropy anomaly detected! Brain #{brain.id} formed.")
+            print(f"\nLow-entropy anomaly detected! Brain #{brain.id} formed.")
 
             print(f"False Memories: {', '.join(brain.memory)}\n")
             for t in range(brain.lifespan):

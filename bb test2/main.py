@@ -30,7 +30,7 @@ while True:
     if not brain and random.random() < RARE_FLUCTUATION_CHANCE:
         bx, by = random.randint(100, WIDTH - 100), random.randint(100, HEIGHT - 100)
         brain = BoltzmannBrain(bx, by, font)
-        print("\n🧠 Boltzmann Brain formed...")
+        print("\nBoltzmann Brain formed...")
         for mem in brain.memory:
             print(f"  Memory: {mem}")
 
@@ -42,7 +42,7 @@ while True:
                 last_think = time.time()
             brain.draw(screen)
         else:
-            print("💨 The brain fades back into entropy.\n")
+            print("The brain fades back into entropy.\n")
             brain.dissolve()
             brain = None
 

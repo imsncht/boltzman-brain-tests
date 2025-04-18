@@ -81,7 +81,7 @@ while True:
     # Occasionally form a Boltzmann brain
     if brain is None and random.random() < 0.0005:  # rare event
         brain = BoltzmannBrain()
-        print("\n[🧠] A Boltzmann Brain has emerged...")
+        print("\nA Boltzmann Brain has emerged...")
 
     # Brain exists
     if brain:
@@ -89,11 +89,11 @@ while True:
             current_time = time.time()
             if current_time - last_think_time > THINK_INTERVAL:
                 thought = brain.think()
-                print(f"[🧠] {thought}")
+                print(f"{thought}")
                 last_think_time = current_time
             brain.draw()
         else:
-            print("[🧠] The brain has dissolved into entropy.")
+            print("The brain has dissolved into entropy.")
             brain = None
 
     pygame.display.flip()
